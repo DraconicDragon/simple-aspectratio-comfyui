@@ -1,17 +1,17 @@
 #  Edit the following fields to match your project
 
 [project]
-name = "comfyui-customnodes-template"
-description = "Template repository for custom nodes from [ComfyUI-CustomNodes-Template](https://github.com/jhj0517/ComfyUI-CustomNodes-Template)."
+name = "simple-aspectratio-comfyui"
+description = "Simple ratio preset selector with csv file"
 version = "1.0.0"
 license = {file = "LICENSE"}
 dependencies = ["",]  # e.g.) ["numpy==1.18.1", ]
 
 [project.urls]
-Repository = "https://github.com/jhj0517/ComfyUI-CustomNodes-Template"
+Repository = "https://github.com/Hapseleg/simple-aspectratio-comfyui/tree/master"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "jhj0517"
-DisplayName = "ComfyUI-CustomNodes-Template"
+PublisherId = "Hapse"
+DisplayName = "Simple Ratio Selector (Hapse)"
 Icon = ""
