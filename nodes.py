@@ -55,4 +55,4 @@ class SimpleRatioSelector:
             height = dimensions[1]
             width = dimensions[0]
 
-        return (width, height)
+        return (int(width), int(height))
