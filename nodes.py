@@ -37,8 +37,18 @@ class SimpleRatioSelector:
         s.preset_ratios_dict = read_ratio_presets()[0]
         return {
             "required": {
-                "select_preset": (s.ratio_presets, {"default": s.ratio_presets[0]}),
-                "orientation": (["Portrait", "Landscape"], {"default": "Portrait"}),
+                "select_preset": (
+                    s.ratio_presets,
+                    {
+                        "default": s.ratio_presets[0],
+                    },
+                ),
+                "portrait": (
+                    "BOOLEAN",
+                    {
+                        "default": False,
+                    },
+                ),
             },
             "hidden": {"unique_id": "UNIQUE_ID", "extra_pnginfo": "EXTRA_PNGINFO", "prompt": "PROMPT"},
         }
@@ -48,13 +58,13 @@ class SimpleRatioSelector:
     CATEGORY = "utils"
     FUNCTION = "run"
 
-    def run(self, select_preset, orientation, unique_id=None, extra_pnginfo=None, prompt=None):
+    def run(self, select_preset, portrait, unique_id=None, extra_pnginfo=None, prompt=None):
         dimensions = self.preset_ratios_dict[select_preset]
 
         height = dimensions[0]
         width = dimensions[1]
 
-        if orientation == "Landscape":
+        if not portrait:
             height = dimensions[1]
             width = dimensions[0]
 
