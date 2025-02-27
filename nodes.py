@@ -41,12 +41,14 @@ class SimpleRatioSelector:
                     s.ratio_presets,
                     {
                         "default": s.ratio_presets[0],
+                        "tooltip": "Select a preset dimensions (Width x Height)",
                     },
                 ),
                 "portrait": (
                     "BOOLEAN",
                     {
                         "default": False,
+                        "tooltip": "This flips the orientation from landscape (Width x Height) to portrait (Height x Width)",
                     },
                 ),
             },
