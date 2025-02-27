@@ -61,8 +61,9 @@ class SimpleRatioSelector:
     FUNCTION = "run"
 
     def run(self, select_preset, portrait, unique_id=None, extra_pnginfo=None, prompt=None):
-        width, height = self.preset_ratios_dict[select_preset]
-
+        width, height = self.preset_ratios_dict[select_preset] # sample output: ['1920', '1080']
+        
+        #  If portrait is True, flip the width and height
         if portrait:
             width, height = height, width
 
