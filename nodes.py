@@ -47,7 +47,7 @@ class SimpleRatioSelector:
                 "portrait": (
                     "BOOLEAN",
                     {
-                        "default": False,
+                        "default": True,
                         "tooltip": "This flips the orientation from landscape (Width x Height) to portrait (Height x Width)",
                     },
                 ),
